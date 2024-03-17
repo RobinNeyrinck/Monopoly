@@ -1,0 +1,177 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Monopoly</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Paytone+One&display=swap" rel="stylesheet">
+    <link rel="icon" type="image/png" sizes="16x16" href="favicon-16x16.png">
+    <link rel="mask-icon" href="safari-pinned-tab.svg" color="#5bbad5">
+    <meta name="msapplication-TileColor" content="#da532c">
+    <meta name="theme-color" content="#ffffff">
+
+    <link rel="stylesheet" href="assets/css/reset.css">
+    <link rel="stylesheet" href="assets/css/screen.css">
+
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+
+
+    <script src="assets/js/config.js"></script>
+
+    <script src="assets/js/data-connector/error-handler.js"></script>
+    <script src="assets/js/data-connector/local-storage-abstractor.js"></script>
+    <script src="assets/js/data-connector/api-communication-abstractor.js"></script>
+
+    <script src="assets/js/initialiser.js"></script>
+    <script src="assets/js/game-connector/game-connector.js"></script>
+    <script src="assets/js/display/display-available-pawn.js"></script>
+    <script src="assets/js/start-game/start-game.js"></script>
+
+    <script src="assets/js/display/display-tiles.js"></script>
+    <script src="assets/js/display/display-current-tile.js"></script>
+    <script src="assets/js/display/display-inventory.js"></script>
+    <script src="assets/js/display/display-opponent-tiles.js"></script>
+    <script src="assets/js/display/display-pawns-on-timeline.js"></script>
+    <script src="assets/js/display/display-selected-tile.js"></script>
+
+    <script src="assets/js/buy-property/check-property-availability.js"></script>
+    <script src="assets/js/buy-property/buy-property.js"></script>
+    <script src="assets/js/jail-actions/go-to-jail.js"></script>
+    <script src="assets/js/rent/receive-rent.js"></script>
+    <script src="assets/js/roll-dice/rolling-dice.js"></script>
+    <script src="assets/js/lose-quit-game/quit-game.js"></script>
+    <script src="assets/js/lose-quit-game/lose-game.js"></script>
+    <script src="assets/js/lose-quit-game/check-for-bankruptcy.js"></script>
+    <script src="assets/js/display/display-winners-losers.js"></script>
+    <script src="assets/js/tax-payment/tax-payment.js"></script>
+
+    <script src="assets/js/display/refreshUI.js"></script>
+
+</head>
+<body>
+<a href="rules.html" target="_blank" id="rules-button"><span class="material-icons">help_outline</span></a>
+
+
+<article id="pawn-page">
+    <h1>BeerPoly</h1>
+    <p>Choose your pawn</p>
+    <div id="pawns">
+        <!-- pawn injected with js -->
+    </div>
+    <button id="confirm-color">Confirm</button>
+</article>
+
+<button id="go-back" type="button" class="hidden">Go back</button>
+<article id="start-page" class="hidden">
+    <h1>BeerPoly</h1>
+    <p>Choose the amount of players</p>
+    <ul>
+        <li><button value="2" type="button"> two</button></li>
+        <li><button value="3" type="button"> three</button></li>
+        <li><button value="4" type="button"> four</button></li>
+    </ul>
+</article>
+
+<article id="list-of-games" class="hidden">
+    <h1>BeerPoly</h1>
+    <p>Choose the game you want to join</p>
+    <div id="games">
+        <!-- list injected with js -->
+        <ul>
+        </ul>
+    </div>
+    <button type="button" id="go-back2"> Go back </button>
+</article>
+
+<article class="timeline-container hidden">
+    <div>
+        <button id="quit-game">Quit game</button>
+    </div>
+    <h2>Timeline</h2>
+    <div class="timeline">
+        <template>
+            <div>
+                <p></p>
+            </div>
+        </template>
+    </div>
+</article>
+
+<div class="basic-info hidden">
+    <section class="current-tile">
+        <h3>Current tile</h3>
+        <div class="current-tile">
+        </div>
+        <div id="buttons" class="hidden">
+            <button id="purchase-property">Purchase</button>
+            <button id="remove-property">Pass</button>
+        </div>
+        <div id="jail-buttons" class="hidden">
+            <button id="pay-fine">Pay Fine</button>
+            <button id="jail-card">Use Card </button>
+        </div>
+    </section>
+
+    <section id="opponents">
+        <h3>Opponents</h3>
+        <!-- injected with js -->
+    </section>
+
+    <section class="selected-tile hidden">
+        <h3>Selected tile</h3>
+        <div id="selected-tile-div"></div>
+        <!-- injected with js -->
+    </section>
+
+    <section class="opponent-inventory hidden">
+        <img src="images/dice-1.png" alt="" title="">
+        <h4> Balance: <span id="current-balance-opponent"> </span></h4>
+        <h4> Last roll: <img src="#" alt="" title=""> <img src="#" alt="" title=""></h4>
+        <h4> Assets: </h4>
+        <ul id="assets-opponent">
+            <!-- tile x: house or hotel-->
+        </ul>
+        <h4> Out of jail cards</h4>
+        <p> Amount: <span id="amount-jail-opponent"> </span></p>
+    </section>
+
+    <section class="inventory">
+        <h3>Inventory</h3>
+        <article class="inventory">
+            <div id="left-side-inventory">
+                <img src="assets/media/Pink.png" title="pawn" alt="pawn" id="personal-pawn">
+                <p>Balance:</p>
+                <p>Last roll:<span id="last-roll"></span></p>
+                <h6>Assets:</h6>
+                <ul id="owned-assets">
+                    <!-- inject assets -->
+                </ul>
+                <ul>
+                    <li>
+                        <button id="collect-rent" class="hidden">Collect rent</button>
+                    </li>
+                    <li>
+                        <button id="dice" class="hidden">roll dice</button>
+                    </li>
+                </ul>
+            </div>
+
+            <div id="right-side-inventory">
+                <p>Out of jail cards: </p>
+            </div>
+        </article>
+    </section>
+</div>
+
+<div id="end-game-screen" class="hidden">
+    <button type="button" id="leave-game" class="hidden"> Leave Game </button>
+    <!-- win or lose screen -->
+</div>
+
+<div class="errormessages">
+    <p></p>
+</div>
+
+</body>
+</html>

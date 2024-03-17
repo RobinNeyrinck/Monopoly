@@ -1,0 +1,442 @@
+body {
+    background-color: #F7EBE8;
+    font-size: 1rem;
+    color: #333333;
+    font-family: 'Paytone One', sans-serif;
+}
+
+h1 {
+    font-size: 8rem;
+    text-align: center;
+}
+
+h2 {
+    text-align: center;
+    font-size: 4rem;
+    display: block;
+    margin-top: 3rem;
+}
+
+h3 {
+    font-size: 2rem;
+}
+
+h4 {
+    text-align: center;
+    font-size: 2.5rem;
+    margin-top: 1rem;
+    margin-bottom: 1rem;
+}
+
+h5 {
+    margin-top: 0.5rem;
+    font-size: 1.2rem;
+    text-align: center;
+}
+
+h6 {
+    margin-top: 1rem;
+    margin-left: 1rem;
+    font-size: 2.5rem;
+}
+
+p {
+    text-align: center;
+    font-size: 1.5rem;
+    padding-left: 1rem;
+    padding-top: 0.5rem;
+}
+
+a {
+    color: #333333;
+    text-decoration: none;
+}
+
+#opponents {
+    display: inline-block;
+}
+
+button {
+    margin-left: 1rem;
+    margin-top: 1rem;
+    padding: 0.5rem;
+    border-radius: 0.5rem;
+    font-family: 'Paytone One', sans-serif;
+    color: #333333;
+    font-size: 1.2rem;
+    text-align: center;
+    width: auto;
+    border: 2px solid #333333;
+    background-color: transparent;
+    cursor: pointer;
+}
+
+button:hover {
+    background-color: #333333;
+    color: white;
+    transition-duration: 400ms;
+}
+
+#start-page, #pawn-page, #list-of-games {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 50rem;
+}
+
+.current-tile button {
+    align-content: center;
+}
+
+section .inventory button {
+    width: auto;
+    margin: 4rem 1rem 1rem 1rem;
+}
+
+.current-tile article button {
+    margin: 1rem;
+    width: 8rem;
+}
+
+#start-page button{
+    width: 7rem;
+    margin-left: 1rem;
+}
+
+.opponent-inventory p {
+    font-size: 1rem;
+}
+
+.timeline p {
+    font-size: 1.3rem;
+    padding: 0.5rem 0.5rem 2rem 0.5rem;
+    margin-top: 1rem;
+
+}
+
+section .inventory p {
+    text-align: left;
+}
+
+#pawn-page p{
+    margin-bottom: 4rem;
+}
+
+#start-page p {
+    display: block;
+    text-align: center;
+    margin-top: 0;
+    margin-bottom: 0.5rem;
+}
+
+#winning-screen button {
+    float: right;
+    margin: 1rem;
+}
+
+#pawns button{
+    display: block;
+    margin-right: auto;
+    margin-left: auto;
+}
+
+#start-page ul li button {
+    margin-right: 1rem;
+    margin-left: 2rem;
+    font-size: 1.5rem;
+}
+
+article#list-of-games ul li button{
+    width: 5rem;
+    font-size: 1.2rem;
+}
+
+#start-page ul {
+    text-align: center;
+    margin: 0;
+    padding: 0;
+}
+
+#start-page ul li {
+    display: inline-block;
+}
+
+#start-page a ul li button:hover {
+    background-color: #333333;
+    color: white;
+    transition-duration: 400ms;
+}
+#search-game{
+    border-radius: 0.5rem;
+    font-family: 'Paytone One', sans-serif;
+    color: #333333;
+    font-size: 1.5rem;
+    text-align: center;
+    width: 11rem;
+    border: 2px solid #333333;
+    background-color: transparent;
+    cursor: pointer;
+    height: 3rem;
+
+}
+.center-form{
+    display:flex;
+    justify-content: center;
+}
+
+
+#search-game:hover {
+    background-color: #333333;
+    color: white;
+    transition-duration: 400ms;
+
+}
+
+#rules-button {
+    position: absolute;
+    right: 0.5rem;
+    transform: translate(0rem,0.5rem);
+    background-color: #F7EBE8;
+    margin: 0.3rem 0.3rem 1rem 1rem;
+}
+
+body .material-icons {
+    font-size: 40px;
+}
+
+#pawn-page #pawns {
+    display: flex;
+    flex-flow: row wrap;
+    width: 100%;
+    margin-right: auto;
+    margin-left: auto;
+    margin-top: 1rem;
+}
+
+.opponent-inventory img {
+    width: 2rem;
+}
+
+.basic-info {
+    display: flex;
+    justify-content: space-around;
+    align-items: baseline;
+    margin-top: 5rem;
+}
+
+div.current-tile, #selected-tile-div, .inventory article, div#selected-tile-div{
+    border: 0.125rem solid black;
+    padding: 0.125rem;
+    margin-top: 1rem;
+    width: 23rem;
+    background-color: lightgray;
+}
+
+th, td {
+    padding: 0.5rem;
+    text-align: left;
+}
+
+.timeline div {
+    border: 0.2rem solid #333333;
+    border-radius: 5px;
+    width: auto;
+}
+
+.selected-tile div, .current-tile article div {
+    display: flex;
+    flex-flow: row;
+    justify-content: center;
+}
+
+.timeline {
+    padding: 1rem 0.5rem 0.5rem;
+    display: flex;
+    flex-flow: row nowrap;
+    justify-content: space-around;
+}
+
+
+.timeline div:hover{
+    background-color: #333333;
+    color: #F7EBE8;
+    transition-duration: 200ms;
+    cursor: pointer ;
+}
+
+section .inventory img {
+    height: 6rem;
+    margin: 1rem;
+}
+
+#last-roll img {
+    width: 25%;
+    height: 25%;
+}
+
+#opponents article .pawn img {
+    height: 6rem;
+    margin: 1rem;
+}
+
+
+#pawn-page #pawns img {
+    margin: auto;
+    width: 20%;
+    padding: 1rem;
+
+}
+
+#pawn-page #pawns img:hover {
+    cursor: pointer;
+}
+
+#pawn-page #go-back {
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 2rem;
+    padding: 0.5rem;
+    border: none;
+    color: #333333;
+    width: 10rem;
+}
+
+button#go-back {
+    width: 7rem;
+    position: inherit;
+    left: 0;
+    transform: translateX(0%);
+}
+
+button#go-back2{
+    margin-left: 0;
+}
+
+#pawn-page #go-back:hover {
+    color: #FF5C53;
+    background-color: transparent;
+}
+
+.opponent-inventory article {
+    border: 0.125rem solid black;
+    padding: 0.125rem;
+    background-color: lightgray;
+}
+
+#opponents article {
+    display: flex;
+    justify-content: flex-start;
+    height: 8rem;
+    width: 23rem;
+    margin-top: 1rem;
+    background-color: lightgrey;
+    border: 0.125rem solid black;
+}
+
+#opponents article p {
+    display: block;
+    text-align: left;
+    padding-top: 0.2rem;
+}
+
+#opponents .opponent-info {
+    padding-top: 1rem;
+}
+
+.opponent-inventory {
+    border: 0.125rem solid black;
+    background-color: lightgrey;
+}
+
+section .inventory {
+    width: 30rem;
+}
+
+article.inventory {
+    display: flex;
+}
+
+article.inventory #right-side-inventory {
+    margin-top: 8rem;
+}
+
+form {
+    margin-top: 0.5rem;
+}
+
+form label {
+    text-align: center;
+    font-size: 1.5rem;
+    padding-left: 1rem;
+}
+
+form input {
+    margin-left: 1rem;
+    margin-top: 0.5rem;
+}
+
+.hidden {
+    display: none;
+}
+
+.lost-game {
+    background-image: url("../media/Red-cross.png");
+    background-size: 100% 100%;
+    background-repeat: no-repeat;
+    position: relative;
+}
+
+#last-roll{
+    display: inline-block;
+}
+
+#quit-game{
+    position: relative;
+    width: auto;
+}
+
+div#left-side-inventory ul li {
+    padding-left: 1rem;
+}
+
+.dice{
+    background-color: red;
+}
+
+button#confirm-color{
+    float: right;
+    margin-right: 1.7rem;
+}
+
+article#list-of-games p{
+    margin-bottom: 2rem;
+}
+
+article#list-of-games ul{
+    padding: 0;
+    background-color: #F7EBE8;
+    width: auto;
+    height: 25rem;
+    overflow: scroll;
+    border: #333333 2px solid;
+    border-radius: 1rem;
+}
+
+article#list-of-games ul li{
+    font-size: 1.5rem;
+    text-align: center;
+    color: #333333;
+}
+
+article#list-of-games ul li:last-child{
+    margin-bottom: 1rem;
+}
+#end-game-screen{
+    text-align: center;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 7rem;
+}
